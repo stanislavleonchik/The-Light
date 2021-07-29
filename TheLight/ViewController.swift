@@ -19,15 +19,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        updateUI()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onPressedButton(_ sender: Any) {
-        print(#line, #function)
+    // MARK: - Methods
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isTurnOn.toggle()
         updateUI()
-        
     }
     
     fileprivate func updateUI() {
