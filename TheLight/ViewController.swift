@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         updateUI()
-        if isTurnOn == 8 {
+        if isTurnOn == 3 {
             isTurnOn = 0
         }
         isTurnOn += 1
@@ -37,23 +37,13 @@ class ViewController: UIViewController {
     fileprivate func updateUI() {
         switch isTurnOn {
         case 0:
-            view.backgroundColor = .white
+            view.backgroundColor = .systemRed
         case 1:
-            view.backgroundColor = .red
-        case 2:
-            view.backgroundColor = .orange
-        case 3:
             view.backgroundColor = .yellow
-        case 4:
+        case 2:
             view.backgroundColor = .green
-        case 5:
-            view.backgroundColor = .blue
-        case 6:
-            view.backgroundColor = .cyan
-        case 7:
-            view.backgroundColor = .purple
         default:
-            view.backgroundColor = .white
+            view.backgroundColor = .systemRed
         }
     }
 }
